@@ -1,9 +1,12 @@
 import { ComponentClass } from 'react'
 
-export interface CardProps {
-	[key: string]: any
+export interface PagingProps {
+	/**
+	 * 是否还有更多数据
+	 */
+	hasMore: boolean
 }
 
-declare const Card: ComponentClass<CardProps>
+declare const Paging: ComponentClass<PagingProps>
 
-export default Card
+export default Paging
