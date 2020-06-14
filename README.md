@@ -28,12 +28,11 @@ yarn add taro-ui-hd
 | --------- | -------------------------------------------------- | ------ |
 | BackToTop | 返回顶部组件                                       | stable |
 | Card      | 卡片组件                                           | stable |
-| Countdown | 倒计时组件                                         |
-| Modal     | 弹窗组件                                           |
-| NoData    | 缺省状态组件，含文字和描述，均可通过传入属性自定义 |
-
-| Paging | 分页提示组件 |
-| Tabs | 标签页组件 |
+| Countdown | 倒计时组件                                         | stable |
+| Modal     | 弹窗组件                                           | stable |
+| NoData    | 缺省状态组件，含文字和描述，均可通过传入属性自定义 | stable |
+| Paging    | 分页提示组件                                       | stable |
+| Tabs      | 标签页组件                                         | stable |
 
 ## 更新日志
 
