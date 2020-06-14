@@ -34,6 +34,18 @@ yarn add taro-ui-hd
 | Paging    | 分页提示组件                                       | stable |
 | Tabs      | 标签页组件                                         | stable |
 
+## 使用
+
+```jsx
+import { Paging } from 'taro-ui-hd'
+
+render() {
+  return (
+    <Paging hasMore />
+  )
+}
+```
+
 ## 更新日志
 
 [点此前往](./CHANGELOG.md)
