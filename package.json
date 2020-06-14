@@ -1,13 +1,20 @@
 {
-	"name": "taro-template",
-	"version": "2.0.0",
-	"private": true,
-	"description": "基于 taro 2.x 的开箱即用多端项目模版",
+	"name": "taro-ui-hd",
+	"version": "0.0.1",
+	"private": false,
+	"description": "基于Taro2.x的第三方组件库",
+	"main": "dist/index.js",
+	"main:h5": "dist/h5/index.js",
+	"types": "./@types/index.d.ts",
 	"templateInfo": {
 		"name": "mobx",
 		"typescript": true,
 		"css": "sass"
 	},
+	"files": [
+		"dist",
+		"@types"
+	],
 	"author": "cathe-zhang",
 	"license": "MIT",
 	"scripts": {
