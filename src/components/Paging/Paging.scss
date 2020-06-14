@@ -1,17 +1,17 @@
-.Paging-comp {
+.hd-paging-comp {
   width: 100%;
   height: 88px;
-  line-height: 88px;
   font-size: 28px;
+  line-height: 88px;
   color: #ccc;
 
-  .load-more {
+  .hd-paging-comp-status-loading {
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
   }
 
-  .load-finished {
+  .hd-paging-comp-status-finished {
     text-align: center;
   }
 }

@@ -1,19 +1,43 @@
-.Countdown-comp {
+.hd-countdown-comp {
   display: flex;
   align-items: center;
+  height: 100%;
 
-  .couter-item {
-    height: 24px;
-    line-height: 24px;
-    border-radius:5px;
-    padding: 3px 5px;
+  .counter-item {
+    height: 30px;
+    padding: 0 6px;
+    border-radius: 4px;
     font-size: 24px;
+    line-height: 30px;
     color: #fff;
-    background: linear-gradient(141deg,rgba(255,123,117,1),rgba(254,80,77,1));
+    background:
+ linear-gradient(
+      141deg,
+      rgba(255, 123, 117, 1),
+      rgba(254, 80, 77, 1)
+    );
   }
-  .couter-divider {
+
+  .counter-divider {
     margin: 0 5px;
     font-size: 24px;
-    color: #FE504D;
+    color: #fe504d;
+  }
+
+  .square-divider {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+
+    .square-divider-item {
+      width: 4px;
+      height: 4px;
+      background-color: #333;
+
+      &:last-child {
+        margin-top: 8px;
+      }
+    }
   }
 }

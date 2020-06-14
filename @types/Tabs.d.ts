@@ -6,9 +6,9 @@ export interface TabsProps {
 	 */
 	children?: any
 	/**
-	 * 初始选中的tab id
+	 * 当前tab索引
 	 */
-	initTab: number
+	currentTab: number
 	/**
 	 * tab数组
 	 */

@@ -29,15 +29,7 @@ class App extends Component {
 		/**
 		 * 主包页面声明开始 注释用于判断开始行 勿动
 		 */
-		pages: [
-			'pages/home/index',
-			'pages/common/imgPreview',
-			'pages/lab/FormValidate',
-			'pages/lab/comp',
-			'pages/lab/hooks',
-			'pages/lab/index',
-			'pages/user/index',
-		], // 主包页面声明结束 注释用于判断结束行 勿动
+		pages: ['pages/home/index'], // 主包页面声明结束 注释用于判断结束行 勿动
 		window: {
 			backgroundTextStyle: 'light',
 			navigationBarBackgroundColor: '#fff',

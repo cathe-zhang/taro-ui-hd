@@ -1,11 +1,15 @@
 import { ComponentType } from 'react'
 import Taro, { Component, Config } from '@tarojs/taro'
-import { View, Button, Text, Input } from '@tarojs/components'
+import { View } from '@tarojs/components'
 import { observer, inject } from '@tarojs/mobx'
-import { AtNoticebar, AtTag } from 'taro-ui'
 
-import QQMapWSService from '~/services/qqMap/ws.service'
-import LianouService from '~/services/hydee/lianou.service'
+import HdBackToTop from '~/components/BackToTop/BackToTop'
+import HdCard from '~/components/Card/Card'
+import HdCountdown from '~/components/Countdown/Countdown'
+import HdNoData from '~/components/Nodata/Nodata'
+import HdPaging from '~/components/Paging/Paging'
+import HdModal from '~/components/Popup/Modal'
+import HdTabs from '~/components/Tabs/Tabs'
 import './index.scss'
 
 type PageStateProps = {
@@ -18,8 +22,8 @@ type PageStateProps = {
 }
 
 type PageState = {
-	testState: string
 	mobileText: string // 手机号归属地展示文字
+	modalVisible: boolean
 }
 
 interface Index {
@@ -31,8 +35,8 @@ interface Index {
 @observer
 class Index extends Component {
 	state = {
-		testState: '1212',
 		mobileText: '',
+		modalVisible: true,
 	}
 
 	/**
@@ -46,73 +50,40 @@ class Index extends Component {
 		navigationBarTitleText: '首页',
 	}
 
-	increment = () => {
-		this.setState({
-			testState: `${this.state.testState}expand`,
-		})
-		const { counter } = this.props
-		counter.increment()
-	}
-
-	decrement = () => {
-		const { counter } = this.props
-		counter.decrement()
-	}
-
-	incrementAsync = () => {
-		const { counter } = this.props
-		counter.incrementAsync()
-	}
-
-	// 手机号输入
-	handleInput(type, e) {
-		console.log('type', type, e)
-	}
-
-	async handleJSONPTest() {
-		const result = await QQMapWSService.geocoder({
-			location: `28.2532,112.87887`,
-			get_poi: 0,
-		})
-		console.log('result', result)
-	}
-
-	async handleProxyText() {
-		const result = await LianouService.queryDiseaseByDrugName({
-			ComName: '阿莫西林胶囊',
-		})
-		console.log('result', result)
+	handleTabChange(e) {
+		console.log('handleTabChange', e)
 	}
 
 	render() {
-		const {
-			counter: { counter },
-		} = this.props
-		const { testState, mobileText } = this.state
+		const { mobileText, modalVisible } = this.state
 		console.log('mobileText', mobileText)
 		return (
 			<View className='index'>
-				<AtNoticebar>这是 NoticeBar 通告栏</AtNoticebar>
-				<AtTag size='small'>标签</AtTag>
-				<Input
-					onInput={this.handleInput.bind(this, 'mobile')}
-					type='number'
-					placeholder='请输入手机号'
-				/>
-				{/* <Button onClick={this.queryMobile.bind(this)}>查询手机号归属地</Button> */}
-				{/* <View>归属地：{mobileText}</View> */}
-				<Button
-					onClick={this.handleJSONPTest.bind(this)}
-					className='button-jsonp'
+				<HdBackToTop visible />
+				<HdCard />
+				<HdCountdown leftTime={5000} />
+				<HdNoData text='暂无数据' height={800} color='#ccc' />
+				<HdPaging hasMore />
+				<HdModal
+					visible={modalVisible}
+					onClose={() => this.setState({ modalVisible: false })}
 				>
-					jsonp 测试
-				</Button>
-				<Button onClick={this.handleProxyText.bind(this)}>本地代理 测试</Button>
-				<Button onClick={this.increment}>+</Button>
-				<Button onClick={this.decrement}>-</Button>
-				<Button onClick={this.incrementAsync}>Add Async</Button>
-				<Button onClick={this.incrementAsync}>{testState}</Button>
-				<Text>{counter}</Text>
+					这是弹窗内容
+				</HdModal>
+				<HdTabs
+					currentTab={1}
+					list={[
+						{
+							text: 'tab1',
+							id: 0,
+						},
+						{
+							text: 'tab2',
+							id: 1,
+						},
+					]}
+					onChange={this.handleTabChange.bind(this)}
+				/>
 			</View>
 		)
 	}
