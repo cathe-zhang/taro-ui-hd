@@ -34,7 +34,7 @@ jobs:
       - name: 进入dist文件夹 准备提交代码
         run: |
           # echo 'cd dist/ 进入dist文件夹'
-          # cd dist/
+          cd dist/
 
           echo 'ls 查看dist文件夹下的所有文件'
           ls
