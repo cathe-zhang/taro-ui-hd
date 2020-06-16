@@ -42,7 +42,7 @@ const config = {
 	sourceRoot: 'src',
 	outputRoot: 'dist',
 	plugins: [
-		'@tarojs/plugin-sass',
+		// '@tarojs/plugin-sass',
 		// 小程序project.config.json文件生成插件
 		'taro-plugin-mp',
 		[
