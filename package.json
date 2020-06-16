@@ -46,8 +46,7 @@
 	"lint-staged": {
 		"**/*.js": "eslint --ext .js",
 		"src/**/*.ts": "eslint --ext .ts",
-		"src/**/*.tsx": "eslint --ext .tsx",
-		"src/**/*.scss": "stylelint --syntax scss && stylelint --fix scss"
+		"src/**/*.tsx": "eslint --ext .tsx"
 	},
 	"dependencies": {
 		"@tarojs/components": "2.2.7",
