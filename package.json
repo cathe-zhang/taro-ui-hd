@@ -58,7 +58,7 @@
 		"@tarojs/runner-utils": "2.2.7",
 		"@tarojs/taro": "2.2.7",
 		"@tarojs/taro-alipay": "2.2.7",
-		"@tarojs/taro-h5": "^2.2.7",
+		"@tarojs/taro-h5": "2.2.7",
 		"@tarojs/taro-qq": "2.2.7",
 		"@tarojs/taro-quickapp": "2.2.7",
 		"@tarojs/taro-swan": "2.2.7",
