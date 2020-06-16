@@ -129,11 +129,11 @@ const config = {
 		},
 	},
 	h5: {
-		publicPath: '/',
+		publicPath: '/taro-ui-hd',
 		staticDirectory: 'static',
 		router: {
 			mode: 'browser', // 或者是 'hash'
-			basename: '/h5', // 添加basesname为/h5后 使用taro路由跳转后的路径为 /h5/url 但在地址栏输入 url 和 /h5/url 都可以访问到对应的页面
+			basename: '/taro-ui-hd', // 添加basesname为/h5后 使用taro路由跳转后的路径为 /h5/url 但在地址栏输入 url 和 /h5/url 都可以访问到对应的页面
 			customRoutes: {
 				// 自定义路由 跳转时还是需要使用app.tsx中定义的路由 但是地址栏会表现为自定义的路由 且通过地址栏输入可以访问到对应的页面
 				'/pages/index/index': '/index',
