@@ -42,6 +42,7 @@ const config = {
 	sourceRoot: 'src',
 	outputRoot: 'dist',
 	plugins: [
+		'@tarojs/plugin-sass',
 		// 小程序project.config.json文件生成插件
 		'taro-plugin-mp',
 		[
@@ -74,12 +75,6 @@ const config = {
 			},
 		],
 	],
-	// presets: [
-	// 	[ 'taro_plugins', {
-	// 		homeRoute: 'pages/home/index',
-	// 	} ],
-	// 	'taro-plugin-check-env'
-	// ],
 	babel: {
 		sourceMap: true,
 		presets: [
