@@ -1,6 +1,6 @@
 {
 	"name": "taro-ui-hd",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"private": false,
 	"description": "基于Taro2.x的第三方组件库",
 	"main": "dist/index.js",
@@ -18,7 +18,7 @@
 	"author": "cathe-zhang",
 	"license": "MIT",
 	"scripts": {
-		"build:ui": "TARO_BUILD_TYPE = ui taro build--ui",
+		"build:ui": "TARO_BUILD_TYPE=ui taro build --ui",
 		"dev:mp": "npm run build:mp -- --watch",
 		"dev:mp-test": "npm run build:mp-sit -- --watch",
 		"dev:mp-uat": "npm run build:mp-uat -- --watch",

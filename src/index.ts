@@ -1,4 +1,4 @@
-export { default as HdBackToTop } from '~/components/BackToTop/BackToTop'
+export { default as HdBackToTop } from './components/BackToTop/BackToTop'
 export { default as HdCard } from './components/Card/Card'
 export { default as HdCountdown } from './components/Countdown/Countdown'
 export { default as HdNodata } from './components/Nodata/Nodata'
